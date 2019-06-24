@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.btn{
+    -fx-background-radius: 100%;
+    -fx-border-radius: 100%;
+}
+
+.atras{
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
