@@ -5,9 +5,18 @@
  */
 package eco;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -15,10 +24,44 @@ import javafx.fxml.Initializable;
  * @author Jesus Lozano
  */
 public class CalendarioController implements Initializable {
-
-    /**
-     * Initializes the controller class.
-     */
+    
+    
+    @FXML
+    private void atras(ActionEvent e) throws IOException{
+        window(e, "Menu.fxml");
+    }
+    
+   @FXML
+    private void window(ActionEvent e, String ventana) throws IOException {
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource(ventana));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        app_stage.setMaximized(false);
+        app_stage.setResizable(true);
+        app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
+        app_stage.setTitle("Finca la Esperanza");
+        app_stage.close(); //optional
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+    }
+    
+    @FXML
+    private void nuevoEvento(ActionEvent e) throws IOException{
+        Parent parent = FXMLLoader.load(getClass().getResource("NuevoEvento.fxml"));
+        Scene page_scene = new Scene(parent);
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.setResizable(false);
+        stage.setMaximized(false);
+        stage.setMaxWidth(300);
+        stage.setMaxHeight(400);
+        stage.setMinWidth(300);
+        stage.setMinHeight(400);
+        
+        stage.getIcons().add(new Image("/Imagenes/forest.png"));
+        stage.setTitle("Finca la Esperanza");
+        stage.setScene(page_scene);
+        stage.show();
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

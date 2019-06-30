@@ -41,7 +41,7 @@ public class MenuController implements Initializable {
 
     @FXML
     private void calendario(ActionEvent e) throws IOException{
-        
+        window(e, "Calendario.fxml");
     }
     
     @FXML
