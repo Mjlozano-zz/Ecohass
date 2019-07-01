@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="597.0" prefWidth="839.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eco.TareasController">
+   <stylesheets>
+      <URL value="@consulta.css" />
+   </stylesheets>
+   <children>
+      <Pane prefHeight="54.0" prefWidth="709.0" style="-fx-background-color: #388e3c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXButton layoutX="14.0" layoutY="487.0" onAction="#atras" prefHeight="41.0" prefWidth="103.0" ripplerFill="#dddbdb" styleClass="atras" stylesheets="@../styles/consulta.css" text="Atrás" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <Pane layoutX="62.0" layoutY="71.0" prefHeight="447.0" prefWidth="375.0" style="-fx-background-color: #e0e0e0;" styleClass="backPane" stylesheets="@../styles/menu.css">
+         <children>
+            <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="90.0" layoutY="40.0" prefHeight="38.0" prefWidth="231.0" promptText="NOMBRE DEL TECNICO" />
+            <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="90.0" layoutY="110.0" prefHeight="38.0" prefWidth="231.0" promptText="CÉDULA" />
+            <JFXDatePicker defaultColor="#388e3c" layoutX="91.0" layoutY="174.0" prefHeight="38.0" prefWidth="231.0" promptText="FECHA PARA CUMPLIR ORDEN" />
+            <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="90.0" layoutY="231.0" prefHeight="38.0" prefWidth="231.0" promptText="TITULO DE ORDEN" />
+            <JFXComboBox layoutX="90.0" layoutY="283.0" prefHeight="38.0" prefWidth="120.0" promptText="ARBOLES" />
+            <JFXComboBox layoutX="221.0" layoutY="283.0" prefHeight="38.0" prefWidth="103.0" promptText="AREA" />
+            <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="55.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/name.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="55.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/cedula.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="56.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/title.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="55.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/ar.png" />
+               </image>
+            </ImageView>
+            <JFXTextArea layoutX="91.0" layoutY="334.0" prefHeight="99.0" prefWidth="231.0" promptText="DESCRIPCIÓN" />
+         </children>
+      </Pane>
+      <JFXListView layoutX="454.0" layoutY="71.0" prefHeight="447.0" prefWidth="325.0" styleClass="backPane" stylesheets="@../styles/menu.css" />
+      <JFXButton layoutX="299.0" layoutY="526.0" prefHeight="38.0" prefWidth="129.0" style="-fx-background-color: #388e3c;" styleClass="atras" stylesheets="@../styles/consulta.css" text="Asignar Tarea" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

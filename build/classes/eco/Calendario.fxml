@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.CalendarPicker?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="780.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eco.CalendarioController">
+    <stylesheets>
+        <URL value="@calendario.css" />
+    </stylesheets>
+   <children>
+      <CalendarPicker layoutX="33.0" layoutY="137.0" prefHeight="223.0" prefWidth="715.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="137.0" />
+      <Pane prefHeight="54.0" prefWidth="780.0" style="-fx-background-color: #388e3c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="301.0" layoutY="10.0" text="CALENDARIO" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton layoutX="14.0" layoutY="508.0" onAction="#atras" prefHeight="41.0" prefWidth="103.0" ripplerFill="#dddbdb" styleClass="atras" stylesheets="@../styles/consulta.css" text="Atrás" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="14.0">
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField focusColor="#388e3c" layoutX="50.0" layoutY="360.0" prefHeight="120.0" prefWidth="698.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="32.0" />
+      <JFXButton layoutX="617.0" layoutY="501.0" prefHeight="39.0" prefWidth="131.0" ripplerFill="#dddbdb" style="-fx-background-color: #388e3c;" styleClass="atras" stylesheets="@../styles/consulta.css" text="Consultar" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="32.0">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/search.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="439.0" layoutY="501.0" onAction="#nuevoEvento" prefHeight="39.0" prefWidth="168.0" ripplerFill="#dddbdb" style="-fx-background-color: #388e3c;" styleClass="atras" stylesheets="@../styles/consulta.css" text="Nuevo evento" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="173.0">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/nuevo_evento.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Bold" size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

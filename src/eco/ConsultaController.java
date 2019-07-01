@@ -5,8 +5,10 @@
  */
 package eco;
 
+import com.jfoenix.controls.JFXRadioButton;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +17,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextInputDialog;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 /**
@@ -26,28 +34,80 @@ import javafx.stage.Stage;
 public class ConsultaController implements Initializable {
 
     @FXML
-    private void atras(ActionEvent e) throws IOException{
+    private JFXRadioButton solo_arbol, general;
+
+    @FXML
+    private void atras(ActionEvent e) throws IOException {
         window(e, "Menu.fxml");
     }
-    
+
+    @FXML
+    private void aguacate(ActionEvent e) throws IOException {  //Para consultas de aguacates
+        if (solo_arbol.isSelected() == false && general.isSelected() == false) {
+            Alert alert = new Alert(AlertType.WARNING, "Por favor seleccione un tipo de busqueda", ButtonType.OK);
+            alert.showAndWait();
+        } else {
+            if (solo_arbol.isSelected()) {
+                pideId(e);
+                window(e, "Individual.fxml");
+            } else {
+
+            }
+        }
+    }
+
+    @FXML
+    private void tomates(ActionEvent e) throws IOException {  //Para consultas de tomates
+        if (solo_arbol.isSelected() == false && general.isSelected() == false) {
+            Alert alert = new Alert(AlertType.WARNING, "Por favor seleccione un tipo de busqueda", ButtonType.OK);
+            alert.setTitle("Advertencia");
+            alert.showAndWait();
+        } else {
+            if (solo_arbol.isSelected()) {
+                pideId(e);
+                window(e, "Individual.fxml");
+            } else {
+
+            }
+        }
+    }
+
+    private void pideId(ActionEvent e) throws IOException {  // Muestra el diagolo para que el usuario ingrese el ID
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Consulta");
+        dialog.setHeaderText("Ingrese ID del arbol");
+        Image image = new Image("/Imagenes/data.png");
+        ImageView imageView = new ImageView(image);
+        dialog.setGraphic(imageView);
+        Optional<String> result = dialog.showAndWait();
+    }
+
+    private boolean verifica() { // verifica si el arbol existe
+        
+        return true;
+    }
+
     @FXML
     private void window(ActionEvent e, String ventana) throws IOException {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource(ventana));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
-        app_stage.setResizable(true);
-        app_stage.setMinWidth(900);
-        app_stage.setMinHeight(660);
+        app_stage.setResizable(false);
+        app_stage.setMinWidth(1070);
+        app_stage.setMinHeight(710);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+        ToggleGroup group = new ToggleGroup();
+        solo_arbol.setToggleGroup(group);
+        general.setToggleGroup(group);
+    }
+
 }

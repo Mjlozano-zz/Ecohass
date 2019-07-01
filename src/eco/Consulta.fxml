@@ -24,7 +24,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="241.0" prefWidth="241.0" ripplerFill="#9a9797" styleClass="btn" stylesheets="@../styles/consulta.css" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+            <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#aguacate" prefHeight="241.0" prefWidth="241.0" ripplerFill="#9a9797" styleClass="btn" stylesheets="@../styles/consulta.css" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                <graphic>
                   <ImageView fitHeight="250.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -37,7 +37,7 @@
                   <Font name="Segoe UI Bold" size="26.0" />
                </font>
             </Label>
-            <JFXButton id="btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="241.0" prefWidth="241.0" ripplerFill="#9a9797" styleClass="btn" stylesheets="@../styles/consulta.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+            <JFXButton id="btn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#tomates" prefHeight="241.0" prefWidth="241.0" ripplerFill="#9a9797" styleClass="btn" stylesheets="@../styles/consulta.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
                <graphic>
                   <ImageView fitHeight="257.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" styleClass="btn">
                      <image>
@@ -65,7 +65,7 @@
             <Font name="Segoe UI Bold" size="17.0" />
          </font>
       </JFXButton>
-      <JFXRadioButton layoutX="526.0" layoutY="60.0" text="consulta de un solo arbol" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="60.0" />
-      <JFXRadioButton layoutX="526.0" layoutY="89.0" text="Consulta General" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="90.0" />
+      <JFXRadioButton fx:id="solo_arbol" layoutX="526.0" layoutY="60.0" text="consulta de un solo arbol" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="60.0" />
+      <JFXRadioButton fx:id="general" layoutX="526.0" layoutY="89.0" text="Consulta General" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="90.0" />
    </children>
 </AnchorPane>
