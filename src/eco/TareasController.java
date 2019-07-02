@@ -32,6 +32,8 @@ public class TareasController implements Initializable {
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
         app_stage.setResizable(true);
+        app_stage.setMinWidth(1075);
+        app_stage.setMinHeight(710);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional

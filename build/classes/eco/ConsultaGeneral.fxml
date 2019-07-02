@@ -1,11 +1,355 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eco.ConsultaGeneralController">
-    
+<AnchorPane id="AnchorPane" prefHeight="653.0" prefWidth="1085.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eco.ConsultaGeneralController">
+   <children>
+      <Pane prefHeight="54.0" prefWidth="1085.0" style="-fx-background-color: #388e3c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="408.0" layoutY="11.0" text="CONSULTA GENERAL" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="27.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="arbol_icon" fitHeight="45.0" fitWidth="43.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <JFXTabPane layoutY="54.0" prefHeight="554.0" prefWidth="1085.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <tabs>
+            <Tab text="Lote 1">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutX="29.0" layoutY="50.0" prefHeight="417.0" prefWidth="220.0" />
+                        <ListView layoutX="264.0" layoutY="51.0" prefHeight="416.0" prefWidth="232.0" />
+                        <ListView layoutX="512.0" layoutY="52.0" prefHeight="414.0" prefWidth="269.0" />
+                        <ListView layoutX="799.0" layoutY="52.0" prefHeight="414.0" prefWidth="258.0" />
+                        <Label layoutX="29.0" layoutY="26.0" text="Arboles no existentes">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="27.0" text="Arboles pertenecientes a este lote">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="28.0" text="Arboles enfermos">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="28.0" text="Arboles en buen estado de salud">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Lote 2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutX="29.0" layoutY="50.0" prefHeight="417.0" prefWidth="220.0" />
+                        <ListView layoutX="264.0" layoutY="51.0" prefHeight="416.0" prefWidth="232.0" />
+                        <ListView layoutX="512.0" layoutY="52.0" prefHeight="414.0" prefWidth="269.0" />
+                        <ListView layoutX="799.0" layoutY="52.0" prefHeight="414.0" prefWidth="258.0" />
+                        <Label layoutX="29.0" layoutY="26.0" text="Arboles no existentes">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="27.0" text="Arboles pertenecientes a este lote">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="28.0" text="Arboles enfermos">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="28.0" text="Arboles en buen estado de salud">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Lote 3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutX="29.0" layoutY="50.0" prefHeight="417.0" prefWidth="220.0" />
+                        <ListView layoutX="264.0" layoutY="51.0" prefHeight="416.0" prefWidth="232.0" />
+                        <ListView layoutX="512.0" layoutY="52.0" prefHeight="414.0" prefWidth="269.0" />
+                        <ListView layoutX="799.0" layoutY="52.0" prefHeight="414.0" prefWidth="258.0" />
+                        <Label layoutX="29.0" layoutY="26.0" text="Arboles no existentes">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="27.0" text="Arboles pertenecientes a este lote">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="28.0" text="Arboles enfermos">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="28.0" text="Arboles en buen estado de salud">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Lote 4">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutX="29.0" layoutY="50.0" prefHeight="417.0" prefWidth="220.0" />
+                        <ListView layoutX="264.0" layoutY="51.0" prefHeight="416.0" prefWidth="232.0" />
+                        <ListView layoutX="512.0" layoutY="52.0" prefHeight="414.0" prefWidth="269.0" />
+                        <ListView layoutX="799.0" layoutY="52.0" prefHeight="414.0" prefWidth="258.0" />
+                        <Label layoutX="29.0" layoutY="26.0" text="Arboles no existentes">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="27.0" text="Arboles pertenecientes a este lote">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="28.0" text="Arboles enfermos">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="28.0" text="Arboles en buen estado de salud">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Lote 5">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutX="29.0" layoutY="50.0" prefHeight="417.0" prefWidth="220.0" />
+                        <ListView layoutX="264.0" layoutY="51.0" prefHeight="416.0" prefWidth="232.0" />
+                        <ListView layoutX="512.0" layoutY="52.0" prefHeight="414.0" prefWidth="269.0" />
+                        <ListView layoutX="799.0" layoutY="52.0" prefHeight="414.0" prefWidth="258.0" />
+                        <Label layoutX="29.0" layoutY="26.0" text="Arboles no existentes">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="27.0" text="Arboles pertenecientes a este lote">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="28.0" text="Arboles enfermos">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="28.0" text="Arboles en buen estado de salud">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="General">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutX="29.0" layoutY="50.0" prefHeight="417.0" prefWidth="220.0" />
+                        <ListView layoutX="264.0" layoutY="51.0" prefHeight="416.0" prefWidth="232.0" />
+                        <ListView layoutX="512.0" layoutY="52.0" prefHeight="414.0" prefWidth="269.0" />
+                        <ListView layoutX="799.0" layoutY="52.0" prefHeight="414.0" prefWidth="258.0" />
+                        <Label layoutX="29.0" layoutY="26.0" text="Arboles no existentes">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="27.0" text="Arboles pertenecientes a este lote">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="28.0" text="Arboles enfermos">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="28.0" text="Arboles en buen estado de salud">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="512.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="799.0" layoutY="476.0" text="Cantidad Total: ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <JFXButton layoutX="14.0" layoutY="608.0" onAction="#atras" prefHeight="33.0" prefWidth="93.0" ripplerFill="#dddbdb" styleClass="atras" stylesheets="@../styles/consulta.css" text="Atrás" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="14.0">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Segoe UI Bold" size="17.0" />
+         </font>
+      </JFXButton>
+   </children>
 </AnchorPane>

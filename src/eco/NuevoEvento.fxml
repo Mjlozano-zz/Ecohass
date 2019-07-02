@@ -24,6 +24,6 @@
       <JFXDatePicker defaultColor="#388e3c" layoutX="42.0" layoutY="137.0" prefHeight="34.0" prefWidth="226.0" promptText="Fecha" />
       <JFXTextArea focusColor="#388e3c" labelFloat="true" layoutX="42.0" layoutY="215.0" prefHeight="85.0" prefWidth="226.0" promptText="Descripción" />
       <JFXButton layoutX="147.0" layoutY="321.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #388e3c;" text="Crear" textFill="WHITE" />
-      <JFXButton layoutX="51.0" layoutY="321.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #e53935;" text="Cerrar" textFill="WHITE" />
+      <JFXButton fx:id="cerrar" layoutX="51.0" layoutY="321.0" onAction="#cerrar" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #e53935;" text="Cerrar" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -11,6 +11,10 @@
     -fx-border-radius: 30px;
 }
 
+.btn:hover{
+    -fx-opacity: .8;
+}
+
 .backPane{
     -fx-background-radius: 30px;
     -fx-border-radius: 30px;

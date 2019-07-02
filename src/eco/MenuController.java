@@ -36,7 +36,20 @@ public class MenuController implements Initializable {
     
     @FXML
     private void crear(ActionEvent e) throws IOException{
-        window(e, "Tareas.fxml");
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("Tareas.fxml"));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        app_stage.setMaximized(false);
+        app_stage.setResizable(false);
+        app_stage.setMinWidth(840);
+        app_stage.setMinHeight(610);
+        app_stage.setMaxWidth(840);
+        app_stage.setMaxHeight(610);
+        app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
+        app_stage.setTitle("Finca la Esperanza");
+        app_stage.close(); //optional
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
     }
 
     @FXML
@@ -46,7 +59,20 @@ public class MenuController implements Initializable {
     
     @FXML
     private void nuevoArbol(ActionEvent e) throws IOException{
-        window(e, "NuevoArbol.fxml");
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("NuevoArbol.fxml"));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        app_stage.setMaximized(false);
+        app_stage.setResizable(false);
+        app_stage.setMinWidth(840);
+        app_stage.setMinHeight(610);
+        app_stage.setMaxWidth(840);
+        app_stage.setMaxHeight(610);
+        app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
+        app_stage.setTitle("Finca la Esperanza");
+        app_stage.close(); //optional
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
     }
     
     

@@ -7,7 +7,11 @@ package eco;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
@@ -15,13 +19,28 @@ import javafx.fxml.Initializable;
  * @author Jesus Lozano
  */
 public class ConsultaGeneralController implements Initializable {
-
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private ImageView arbol_icon;
+    public static boolean fruit;
+    
+    @FXML
+    Image aguacate = new Image(getClass().getResourceAsStream("/Imagenes/avocado.png"));
+    Image tomate = new Image(getClass().getResourceAsStream("/Imagenes/tomato.png"));
+    
+    @FXML
+    private void atras(ActionEvent e){
+        
+    }
+      
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        if(fruit){
+            arbol_icon.setImage(aguacate);
+        }else{
+            arbol_icon.setImage(tomate);
+        }
+        
     }    
     
 }

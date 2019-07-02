@@ -37,6 +37,11 @@ public class NuevoArbolController implements Initializable {
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
         app_stage.setResizable(false);
+        app_stage.setMinWidth(1075);
+        app_stage.setMinHeight(710);
+        app_stage.setMaxWidth(1075);
+        app_stage.setMaxHeight(710);
+        
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional

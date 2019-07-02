@@ -51,7 +51,8 @@ public class ConsultaController implements Initializable {
                 pideId(e);
                 window(e, "Individual.fxml");
             } else {
-
+                window(e, "ConsultaGeneral.fxml");
+                ConsultaGeneralController.fruit = true;
             }
         }
     }
@@ -67,7 +68,8 @@ public class ConsultaController implements Initializable {
                 pideId(e);
                 window(e, "Individual.fxml");
             } else {
-
+                window(e, "ConsultaGeneral.fxml");
+                ConsultaGeneralController.fruit = false;
             }
         }
     }
@@ -83,7 +85,7 @@ public class ConsultaController implements Initializable {
     }
 
     private boolean verifica() { // verifica si el arbol existe
-        
+
         return true;
     }
 
@@ -94,7 +96,7 @@ public class ConsultaController implements Initializable {
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
         app_stage.setResizable(false);
-        app_stage.setMinWidth(1070);
+        app_stage.setMinWidth(1075);
         app_stage.setMinHeight(710);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
