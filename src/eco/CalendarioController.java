@@ -65,7 +65,12 @@ public class CalendarioController implements Initializable {
     }
     
     @FXML
-    private void cerrar(ActionEvent e) {
+    private void agregarEvento(ActionEvent e){  //Aqui va el codigo para agregar un nuevo evento
+    
+    }
+    
+    @FXML
+    private void cerrar(ActionEvent e) {  //cierra a ventana de nuevo evento
         Stage stage = (Stage) cerrar.getScene().getWindow();
         stage.close();
     }
