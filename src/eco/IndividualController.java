@@ -32,7 +32,7 @@ public class IndividualController implements Initializable {
     @FXML
     JFXButton zoomIn, zoomOut;
     @FXML
-    ImageView image;
+    ImageView image; // esta es la variable en la que cargaras la imagen
     @FXML
     Pane ipane;
     @FXML

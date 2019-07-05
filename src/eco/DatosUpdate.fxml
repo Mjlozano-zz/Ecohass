@@ -29,47 +29,47 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <JFXRadioButton text="Nivel de Crecimiento" GridPane.columnIndex="1">
+                  <JFXRadioButton fx:id="ncreB" text="Nivel de Crecimiento" GridPane.columnIndex="1">
                      <font>
                         <Font name="Segoe UI Bold" size="14.0" />
                      </font>
                   </JFXRadioButton>
-                  <JFXRadioButton text="Zona">
+                  <JFXRadioButton fx:id="zonaB" text="Zona">
                      <font>
                         <Font name="Segoe UI Bold" size="14.0" />
                      </font>
                   </JFXRadioButton>
-                  <JFXRadioButton text="Altura" GridPane.rowIndex="1">
+                  <JFXRadioButton fx:id="alturaB" text="Altura" GridPane.rowIndex="1">
                      <font>
                         <Font name="Segoe UI Bold" size="14.0" />
                      </font>
                   </JFXRadioButton>
-                  <JFXRadioButton text="Fecha de Siembra" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <JFXRadioButton fx:id="fechaSB" text="Fecha de Siembra" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="Segoe UI Bold" size="14.0" />
                      </font>
                   </JFXRadioButton>
-                  <JFXRadioButton text="Ancho" GridPane.rowIndex="2">
+                  <JFXRadioButton fx:id="anchoB" text="Ancho" GridPane.rowIndex="2">
                      <font>
                         <Font name="Segoe UI Bold" size="14.0" />
                      </font>
                   </JFXRadioButton>
-                  <JFXRadioButton text="Fecha de la Foto" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <JFXRadioButton fx:id="fechaFB" text="Fecha de la Foto" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font name="Segoe UI Bold" size="14.0" />
                      </font>
                   </JFXRadioButton>
-                  <JFXRadioButton text="Edad" GridPane.rowIndex="3">
+                  <JFXRadioButton fx:id="edadB" text="Edad" GridPane.rowIndex="3">
                      <font>
                         <Font name="Segoe UI Bold" size="14.0" />
                      </font>
                   </JFXRadioButton>
-                  <JFXRadioButton text="Salud" GridPane.rowIndex="4">
+                  <JFXRadioButton fx:id="saludB" text="Salud" GridPane.rowIndex="4">
                      <font>
                         <Font name="Segoe UI Bold" size="14.0" />
                      </font>
                   </JFXRadioButton>
-                  <JFXRadioButton text="Total Producido" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <JFXRadioButton fx:id="totalB" text="Total Producido" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <font>
                         <Font name="Segoe UI Bold" size="14.0" />
                      </font>
@@ -85,7 +85,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton alignment="CENTER" contentDisplay="RIGHT" layoutX="258.0" layoutY="326.0" prefHeight="33.0" prefWidth="103.0" styleClass="log" stylesheets="@../styles/Login.css" text="Actualizar">
+            <JFXButton alignment="CENTER" contentDisplay="RIGHT" layoutX="258.0" layoutY="326.0" onAction="#goForm" prefHeight="33.0" prefWidth="103.0" styleClass="log" stylesheets="@../styles/Login.css" text="Actualizar">
                <graphic>
                   <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -99,7 +99,7 @@
                   <Font name="Segoe UI Semibold" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="222.0" layoutY="14.0" text="ARBOL #">
+            <Label fx:id="n_arbol" layoutX="222.0" layoutY="14.0" text="ARBOL #">
                <font>
                   <Font name="Segoe UI Semibold" size="20.0" />
                </font>
