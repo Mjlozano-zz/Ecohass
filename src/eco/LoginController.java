@@ -28,6 +28,9 @@ public class LoginController implements Initializable {
 
     @FXML
     private Label label;
+    
+    @FXML
+    private JFXButton cerrar;
 
     @FXML
     private void logIn(ActionEvent event) throws IOException {
@@ -40,7 +43,7 @@ public class LoginController implements Initializable {
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
-        app_stage.setResizable(true);
+        app_stage.setResizable(false);
         app_stage.setMinWidth(900);
         app_stage.setMinHeight(660);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
@@ -49,14 +52,14 @@ public class LoginController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
-    
+
     @FXML
-    private void observador(ActionEvent e) throws IOException{
+    private void observador(ActionEvent e) throws IOException {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Consulta.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
-        app_stage.setResizable(true);
+        app_stage.setResizable(false);
         app_stage.setMinWidth(839);
         app_stage.setMinHeight(573);
         app_stage.setMaxWidth(1000);
@@ -66,6 +69,12 @@ public class LoginController implements Initializable {
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+    }
+
+    @FXML
+    private void cerrar(ActionEvent e) {
+        Stage stage = (Stage) cerrar.getScene().getWindow();
+        stage.close();
     }
 
     @Override

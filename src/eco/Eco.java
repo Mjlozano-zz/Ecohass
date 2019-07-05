@@ -11,14 +11,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
  * @author Jesus Lozano
  */
 public class Eco extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));  //Se carga la primera ventana     
@@ -37,5 +39,5 @@ public class Eco extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

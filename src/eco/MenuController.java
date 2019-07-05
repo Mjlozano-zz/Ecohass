@@ -54,7 +54,21 @@ public class MenuController implements Initializable {
 
     @FXML
     private void calendario(ActionEvent e) throws IOException{
-        window(e, "Calendario.fxml");
+         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Calendario.fxml"));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        app_stage.setMaximized(false);
+        app_stage.setResizable(false);
+        app_stage.setMinWidth(780);
+        app_stage.setMinHeight(580);
+        app_stage.setMaxWidth(780);
+        app_stage.setMaxHeight(580);
+        app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
+        app_stage.setTitle("Finca la Esperanza");
+        app_stage.close(); //optional
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+        
     }
     
     @FXML

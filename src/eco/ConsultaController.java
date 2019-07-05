@@ -5,6 +5,7 @@
  */
 package eco;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
 import java.io.IOException;
 import java.net.URL;
@@ -35,6 +36,9 @@ public class ConsultaController implements Initializable {
 
     @FXML
     private JFXRadioButton solo_arbol, general;
+    
+    @FXML
+    public static JFXButton atr;
 
     @FXML
     private void atras(ActionEvent e) throws IOException {

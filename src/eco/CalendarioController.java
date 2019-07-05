@@ -69,6 +69,12 @@ public class CalendarioController implements Initializable {
     
     }
     
+    
+    @FXML
+    private void consultar(ActionEvent e){ //aqui pones el codigo para consultar un evento
+        
+    }
+    
     @FXML
     private void cerrar(ActionEvent e) {  //cierra a ventana de nuevo evento
         Stage stage = (Stage) cerrar.getScene().getWindow();

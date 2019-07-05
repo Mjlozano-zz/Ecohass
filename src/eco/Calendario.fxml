@@ -39,7 +39,7 @@
          </font>
       </JFXButton>
       <JFXTextField focusColor="#388e3c" layoutX="50.0" layoutY="360.0" prefHeight="120.0" prefWidth="698.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="32.0" />
-      <JFXButton layoutX="617.0" layoutY="501.0" prefHeight="39.0" prefWidth="131.0" ripplerFill="#dddbdb" style="-fx-background-color: #388e3c;" styleClass="atras" stylesheets="@../styles/consulta.css" text="Consultar" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="32.0">
+      <JFXButton layoutX="617.0" layoutY="501.0" onAction="#consultar" prefHeight="39.0" prefWidth="131.0" ripplerFill="#dddbdb" style="-fx-background-color: #388e3c;" styleClass="atras" stylesheets="@../styles/consulta.css" text="Consultar" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="32.0">
          <graphic>
             <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                <image>

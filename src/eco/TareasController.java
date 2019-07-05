@@ -6,19 +6,20 @@
 package eco;
 
 import com.jfoenix.controls.JFXListView;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
@@ -61,11 +62,11 @@ public class TareasController implements Initializable {
 
     @FXML
     private void addTarea() { // Aqui pones el codigo para agregar una nueva tarea
-        
+
         //Automaticamente se agrega la tarea al ListView
-        Label lbl = new Label("Nueva Tarea"); 
+        Label lbl = new Label("Nueva Tarea");
         lbl.setGraphic(new ImageView(pendiente));//Aqui Por defecto a la tarrea se le pone el icono de pendiente
-        listaT.getItems().add(lbl); 
+        listaT.getItems().add(lbl);
         lbl.setContextMenu(menu);
     }
 
@@ -83,11 +84,45 @@ public class TareasController implements Initializable {
         }
     }
 
+    private void infoBox(String titulo, String creador, String receptor, String descripcion, String fecha) {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Detalles");
+        alert.setHeaderText("Detalles de la tarea");
+        alert.setContentText("Titulo: "+titulo+"\n"+"Creador: "+creador+"\n"+"Receptor: "+receptor+"\n"+"Descripción: "+descripcion+"\n"+"Fecha de Creación: "+fecha);
+        alert.showAndWait();
+    }
+
+    private void cambiarEstado() {
+        menu.getItems().get(0).setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                Alert alert = new Alert(AlertType.CONFIRMATION, "¿Desea cambiar el estado de la tarea?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
+                alert.setTitle("Cambiar estado");
+                alert.showAndWait();
+
+                if (alert.getResult() == ButtonType.YES) {
+                    //Aqui pones el codigo para cambiar el estado
+                }
+            }
+        });
+    }
+
+    private void detalles() {
+        menu.getItems().get(1).setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent e) {
+                infoBox("kjbkgdfg", "kjbkbkhj", "kjgjkgbi", "bjhgjhg", "opipi"); //Aqui tienes que poner los parametros que saques de la base de datos
+            }
+        });
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {  //Todo lo que se ponga aqui, se va a ejecutar apenas inicie la ventana
         menu.getItems().add(cambiar);
         menu.getItems().add(detalles);
+        cambiarEstado();
         agregaElementos();
+        detalles();
     }
 
 }

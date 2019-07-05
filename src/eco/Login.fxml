@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="log_pane" prefHeight="449.0" prefWidth="353.0" styleClass="log" stylesheets="@../styles/Login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eco.LoginController">
+<AnchorPane id="log_pane" prefHeight="449.0" prefWidth="353.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eco.LoginController">
    <children>
       <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="65.0" layoutY="215.0" prefHeight="35.0" prefWidth="224.0" promptText="Usuario" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="64.0" />
       <JFXPasswordField focusColor="#388e3c" layoutX="65.0" layoutY="270.0" prefHeight="35.0" prefWidth="224.0" promptText="Contraseña" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="64.0" />
