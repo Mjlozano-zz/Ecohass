@@ -6,6 +6,7 @@
 package eco;
 
 import com.jfoenix.controls.JFXButton;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,6 +21,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 /**
@@ -93,6 +95,18 @@ public class IndividualController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
+    
+    @FXML
+    private void nuevaImagen(ActionEvent e) throws IOException { //Aqui pones el codigo para una nueva consulta de un arbol
+        FileChooser fc = new FileChooser();
+        File archivo = fc.showOpenDialog(null);
+        
+        if(archivo == null){
+            System.out.println("No se selecciono Archivo");
+        }
+        
+    }
+    
 
     @FXML
     private void nuevaConsulta(ActionEvent e) throws IOException { //Aqui pones el codigo para una nueva consulta de un arbol
