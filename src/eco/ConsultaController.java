@@ -36,13 +36,25 @@ public class ConsultaController implements Initializable {
 
     @FXML
     private JFXRadioButton solo_arbol, general;
-    
+
     @FXML
     public static JFXButton atr;
 
     @FXML
     private void atras(ActionEvent e) throws IOException {
-        window(e, "Menu.fxml");
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("Menu.fxml"));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        app_stage.setMaximized(false);
+        app_stage.setResizable(false);
+        app_stage.setMinWidth(900);
+        app_stage.setMinHeight(660);
+        app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
+        app_stage.setTitle("Finca la Esperanza");
+        app_stage.close(); //optional
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+        
     }
 
     @FXML

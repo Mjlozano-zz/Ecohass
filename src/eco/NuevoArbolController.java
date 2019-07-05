@@ -26,32 +26,35 @@ import javafx.stage.Stage;
 public class NuevoArbolController implements Initializable {
 
     @FXML
-    private void atras(ActionEvent e) throws IOException{
+    private void atras(ActionEvent e) throws IOException {
         window(e, "Menu.fxml");
     }
-    
-     @FXML
+
+    @FXML
     private void window(ActionEvent e, String ventana) throws IOException {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource(ventana));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
         app_stage.setResizable(false);
-        app_stage.setMinWidth(1075);
-        app_stage.setMinHeight(710);
-        app_stage.setMaxWidth(1075);
-        app_stage.setMaxHeight(710);
-        
+        app_stage.setMinWidth(900);
+        app_stage.setMinHeight(660);
+
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
-    
+
+    @FXML
+    private void insertar(ActionEvent e) throws IOException {
+       //Aqui va el codigo para insertar nuevo arbol
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

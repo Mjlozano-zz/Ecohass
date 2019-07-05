@@ -11,9 +11,16 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eco.NuevoArbolController">
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eco.NuevoArbolController">
    <children>
-      <Pane prefHeight="54.0" prefWidth="880.0" style="-fx-background-color: #388e3c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane prefHeight="54.0" prefWidth="880.0" style="-fx-background-color: #388e3c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="317.0" layoutY="2.0" prefHeight="51.0" prefWidth="205.0" text="NUEVO ARBOL" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="27.0" />
+               </font>
+            </Label>
+         </children></Pane>
       <Pane layoutX="118.0" layoutY="97.0" prefHeight="450.0" prefWidth="603.0" style="-fx-background-color: #e0e0e0;" styleClass="backPane" stylesheets="@../styles/menu.css">
          <children>
             <Label layoutX="199.0" layoutY="60.0" text="INSERTAR NUEVO ARBOL">
@@ -34,7 +41,7 @@
             <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="360.0" layoutY="108.0" prefHeight="36.0" prefWidth="167.0" promptText="NIVEL DE CRECIMIENTO" />
             <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="360.0" layoutY="169.0" prefHeight="36.0" prefWidth="167.0" promptText="TOTAL PRODUCIDO" />
             <JFXDatePicker defaultColor="#388e3c" layoutX="358.0" layoutY="225.0" prefHeight="36.0" prefWidth="182.0" promptText="FECHA DE SIEMBRA" />
-            <JFXButton layoutX="370.0" layoutY="295.0" prefHeight="36.0" prefWidth="157.0" style="-fx-background-color: #388e3c;" text="Registrar" textFill="WHITE">
+            <JFXButton layoutX="358.0" layoutY="289.0" onAction="#insertar" prefHeight="41.0" prefWidth="182.0" style="-fx-background-color: #388e3c;" styleClass="log" stylesheets="@../styles/Login.css" text="Registrar" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

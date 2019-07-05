@@ -12,12 +12,19 @@ import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 /**
  *
@@ -47,39 +54,62 @@ public class FormularioActualizarController implements Initializable {
         if (editables[0] == false) {
             zonaF.setDisable(true);
         }
-        
+
         if (editables[1] == false) {
             alturaF.setDisable(true);
         }
-        
+
         if (editables[2] == false) {
             anchoF.setDisable(true);
         }
-        
+
         if (editables[3] == false) {
             edadF.setDisable(true);
         }
-        
+
         if (editables[4] == false) {
             saludF.setDisable(true);
         }
-        
+
         if (editables[5] == false) {
             ncreF.setDisable(true);
         }
-        
+
         if (editables[6] == false) {
             fechaFF.setDisable(true);
         }
-        
+
         if (editables[7] == false) {
             fechaSF.setDisable(true);
         }
-        
+
         if (editables[8] == false) {
             totalF.setDisable(true);
         }
 
+    }
+
+    @FXML
+    private void actualizar(ActionEvent e) {
+        //aqui va el codigo para actualizar la informacion del arbol
+    }
+
+    @FXML
+    private void atras(ActionEvent e) throws IOException {
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("DatosUpdate.fxml"));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        app_stage.setMaximized(false);
+        app_stage.setResizable(false);
+        app_stage.setMinWidth(726);
+        app_stage.setMinHeight(544);
+        app_stage.setMaxWidth(726);
+        app_stage.setMaxHeight(544);
+        app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
+        app_stage.setTitle("Finca la Esperanza");
+        app_stage.hide(); //optional
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
     }
 
     @Override
