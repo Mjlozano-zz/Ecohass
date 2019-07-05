@@ -16,7 +16,21 @@
         <URL value="@menu.css" />
     </stylesheets>
    <children>
-      <Pane prefHeight="54.0" prefWidth="880.0" style="-fx-background-color: #388e3c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane prefHeight="54.0" prefWidth="880.0" style="-fx-background-color: #388e3c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton contentDisplay="RIGHT" layoutX="732.0" layoutY="8.0" text="Cerrar Sesión" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children></Pane>
       <GridPane alignment="CENTER" layoutX="57.0" layoutY="72.0" prefHeight="496.0" prefWidth="767.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="72.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

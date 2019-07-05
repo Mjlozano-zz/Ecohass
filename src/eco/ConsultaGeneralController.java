@@ -5,13 +5,19 @@
  */
 package eco;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -28,8 +34,21 @@ public class ConsultaGeneralController implements Initializable {
     Image tomate = new Image(getClass().getResourceAsStream("/Imagenes/tomato.png"));
     
     @FXML
-    private void atras(ActionEvent e){
-        
+    private void atras(ActionEvent e) throws IOException {
+        Parent home_page_parent = FXMLLoader.load(getClass().getResource("Consulta.fxml"));
+        Scene home_page_scene = new Scene(home_page_parent);
+        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        app_stage.setMaximized(false);
+        app_stage.setResizable(false);
+        app_stage.setMinWidth(840);
+        app_stage.setMinHeight(574);
+        app_stage.setMaxWidth(840);
+        app_stage.setMaxHeight(574);
+        app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
+        app_stage.setTitle("Finca la Esperanza");
+        app_stage.close(); //optional
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
     }
       
     
