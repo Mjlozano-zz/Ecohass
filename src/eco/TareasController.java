@@ -88,7 +88,7 @@ public class TareasController implements Initializable {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Detalles");
         alert.setHeaderText("Detalles de la tarea");
-        alert.setContentText("Titulo: "+titulo+"\n"+"Creador: "+creador+"\n"+"Receptor: "+receptor+"\n"+"Descripción: "+descripcion+"\n"+"Fecha de Creación: "+fecha);
+        alert.setContentText("Titulo: " + titulo + "\n" + "Creador: " + creador + "\n" + "Receptor: " + receptor + "\n" + "Descripción: " + descripcion + "\n" + "Fecha de Creación: " + fecha);
         alert.showAndWait();
     }
 
@@ -101,7 +101,9 @@ public class TareasController implements Initializable {
                 alert.showAndWait();
 
                 if (alert.getResult() == ButtonType.YES) {
-                    //Aqui pones el codigo para cambiar el estado
+
+                    listaT.getSelectionModel().getSelectedItem().setGraphic(new ImageView(hecho)); //Aqui se cambia el icono de estado
+
                 }
             }
         });
@@ -123,7 +125,7 @@ public class TareasController implements Initializable {
         cambiarEstado();
         agregaElementos();
         detalles();
-        
+
     }
 
 }
