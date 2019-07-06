@@ -6,6 +6,7 @@
 package eco;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXListView;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -17,6 +18,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -39,6 +41,9 @@ public class IndividualController implements Initializable {
     Pane ipane;
     @FXML
     AnchorPane zpane;
+    
+    @FXML
+    JFXListView<Label> tSalud, tNutricion, tMantenimiento, tCosecha; //Esto son todos los ListView de la consulta individual
 
     @FXML
     private void zoomIn(ActionEvent e) {     //hace zoom positivo a la imagen
