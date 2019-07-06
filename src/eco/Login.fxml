@@ -11,9 +11,9 @@
 
 <AnchorPane id="log_pane" prefHeight="449.0" prefWidth="353.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eco.LoginController">
    <children>
-      <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="65.0" layoutY="215.0" prefHeight="35.0" prefWidth="224.0" promptText="Usuario" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="64.0" />
-      <JFXPasswordField focusColor="#388e3c" layoutX="65.0" layoutY="270.0" prefHeight="35.0" prefWidth="224.0" promptText="Contraseña" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="64.0" />
-      <JFXButton layoutX="65.0" layoutY="331.0" onAction="#logIn" prefHeight="43.0" prefWidth="224.0" style="-fx-background-color: #388e3c;" styleClass="log" stylesheets="@../styles/Login.css" text="Iniciar Sesión" textFill="WHITE">
+      <JFXTextField fx:id="user" focusColor="#388e3c" labelFloat="true" layoutX="65.0" layoutY="215.0" onKeyPressed="#logInK" prefHeight="35.0" prefWidth="224.0" promptText="Usuario" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="64.0" />
+      <JFXPasswordField fx:id="passw" focusColor="#388e3c" layoutX="65.0" layoutY="270.0" onKeyPressed="#logInK" prefHeight="35.0" prefWidth="224.0" promptText="Contraseña" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="64.0" />
+      <JFXButton fx:id="logB" layoutX="65.0" layoutY="331.0" onAction="#logIn" onKeyPressed="#logInK" prefHeight="43.0" prefWidth="224.0" style="-fx-background-color: #388e3c;" styleClass="log" stylesheets="@../styles/Login.css" text="Iniciar Sesión" textFill="WHITE">
          <font>
             <Font name="Segoe UI Black" size="15.0" />
          </font>

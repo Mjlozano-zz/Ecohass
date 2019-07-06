@@ -41,7 +41,8 @@ public class IndividualController implements Initializable {
     Pane ipane;
     @FXML
     AnchorPane zpane;
-    
+    Image imagen_arbol = new Image(getClass().getResourceAsStream("/Imagenes/prueba.jpg")); //aqui cargas la imagen del arbol
+
     @FXML
     JFXListView<Label> tSalud, tNutricion, tMantenimiento, tCosecha; //Esto son todos los ListView de la consulta individual
 
@@ -50,6 +51,7 @@ public class IndividualController implements Initializable {
         double altura = image.getFitHeight();
         double ancho = image.getFitWidth();
         image.setPreserveRatio(true);
+        zpane.setPrefSize(ancho + 20, altura + 20);
         image.setFitHeight(altura + 20);
         image.setFitWidth(ancho + 20);
 
@@ -60,9 +62,14 @@ public class IndividualController implements Initializable {
         double altura = image.getFitHeight();
         double ancho = image.getFitWidth();
         image.setPreserveRatio(true);
+        zpane.setPrefSize(ancho - 20, altura - 20);
         image.setFitHeight(altura - 20);
         image.setFitWidth(ancho - 20);
 
+    }
+
+    private void ponerImagen() {
+        image.setImage(imagen_arbol);
     }
 
     @FXML
@@ -100,18 +107,17 @@ public class IndividualController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
     }
-    
+
     @FXML
     private void nuevaImagen(ActionEvent e) throws IOException { //Aqui pones el codigo para una nueva consulta de un arbol
         FileChooser fc = new FileChooser();
         File archivo = fc.showOpenDialog(null);
-        
-        if(archivo == null){
+
+        if (archivo == null) {
             System.out.println("No se selecciono Archivo");
         }
-        
+
     }
-    
 
     @FXML
     private void nuevaConsulta(ActionEvent e) throws IOException { //Aqui pones el codigo para una nueva consulta de un arbol
@@ -120,6 +126,6 @@ public class IndividualController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        ponerImagen();
     }
 }

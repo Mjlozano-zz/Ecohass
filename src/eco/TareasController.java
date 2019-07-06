@@ -123,6 +123,7 @@ public class TareasController implements Initializable {
         cambiarEstado();
         agregaElementos();
         detalles();
+        
     }
 
 }

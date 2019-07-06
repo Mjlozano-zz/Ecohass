@@ -63,5 +63,19 @@
             <Font name="Segoe UI Bold" size="17.0" />
          </font>
       </JFXButton>
+      <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="53.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/resultado.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="78.0" layoutY="328.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #388e3c;">
+         <children>
+            <Label layoutX="26.0" layoutY="4.0" text="Resultados de busqueda" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
