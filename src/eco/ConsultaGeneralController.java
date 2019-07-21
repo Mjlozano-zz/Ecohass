@@ -40,10 +40,6 @@ public class ConsultaGeneralController implements Initializable {
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
         app_stage.setResizable(false);
-        app_stage.setMinWidth(840);
-        app_stage.setMinHeight(574);
-        app_stage.setMaxWidth(840);
-        app_stage.setMaxHeight(574);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
@@ -54,11 +50,11 @@ public class ConsultaGeneralController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        if(fruit){
-            arbol_icon.setImage(aguacate);
-        }else{
-            arbol_icon.setImage(tomate);
-        }
+//        if(fruit){
+//            arbol_icon.setImage(aguacate);
+//        }else{
+//            arbol_icon.setImage(tomate);
+//        }
         
     }    
     

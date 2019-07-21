@@ -7,21 +7,12 @@
 package eco;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.input.KeyCode;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import javafx.scene.input.KeyEvent;
-import eco.LoginController;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -39,6 +30,7 @@ public class Eco extends Application {
         stage.centerOnScreen();
         stage.setTitle("Iniciar Sesión");
         stage.show();
+        stage.centerOnScreen();
         
     }
 

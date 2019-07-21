@@ -95,21 +95,16 @@ public class FormularioActualizarController implements Initializable {
     }
 
     @FXML
-    private void atras(ActionEvent e) throws IOException {
+    private void atras(ActionEvent e) throws IOException, Throwable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("DatosUpdate.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-        app_stage.setMinWidth(726);
-        app_stage.setMinHeight(544);
-        app_stage.setMaxWidth(726);
-        app_stage.setMaxHeight(544);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.hide(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.centerOnScreen();
     }
 
     @Override

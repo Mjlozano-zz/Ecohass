@@ -53,15 +53,14 @@ public class LoginController implements Initializable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Menu.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
         app_stage.setMinWidth(900);
         app_stage.setMinHeight(660);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
-        app_stage.hide(); //optional
+        app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.centerOnScreen();
         //----------------------------------------------------------------------------------
     }
 
@@ -72,13 +71,14 @@ public class LoginController implements Initializable {
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
         app_stage.setResizable(false);
-        app_stage.setMinWidth(900);
-        app_stage.setMinHeight(660);
+//        app_stage.setMinWidth(900);
+//        app_stage.setMinHeight(660);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
-        app_stage.hide(); //optional
+        app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.centerOnScreen();
     }
 
     @FXML
@@ -88,15 +88,16 @@ public class LoginController implements Initializable {
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
         app_stage.setResizable(false);
-        app_stage.setMinWidth(839);
-        app_stage.setMinHeight(573);
-        app_stage.setMaxWidth(1000);
-        app_stage.setMaxHeight(650);
+//        app_stage.setMinWidth(839);
+//        app_stage.setMinHeight(573);
+//        app_stage.setMaxWidth(1000);
+//        app_stage.setMaxHeight(650);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close();
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.centerOnScreen();
     }
 
     @Override

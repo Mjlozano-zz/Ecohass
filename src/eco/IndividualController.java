@@ -24,6 +24,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -70,42 +71,34 @@ public class IndividualController implements Initializable {
 
     private void ponerImagen() {
         image.setImage(imagen_arbol);
+        
     }
 
     @FXML
-    private void editInfo(ActionEvent e) throws IOException { //Lleva a la ventana para actualizar la información del arbol
+    private void editInfo(ActionEvent e) throws IOException, Throwable { //Lleva a la ventana para actualizar la información del arbol
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("DatosUpdate.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-        app_stage.setMinWidth(726);
-        app_stage.setMinHeight(544);
-        app_stage.setMaxWidth(726);
-        app_stage.setMaxHeight(544);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
+        app_stage.setResizable(true);
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.centerOnScreen();
     }
 
     @FXML
     private void atras(ActionEvent e) throws IOException {
-        Parent home_page_parent = FXMLLoader.load(getClass().getResource("Consulta.fxml"));
+         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Consulta.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-        app_stage.setMinWidth(840);
-        app_stage.setMinHeight(574);
-        app_stage.setMaxWidth(840);
-        app_stage.setMaxHeight(574);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.centerOnScreen();
     }
 
     @FXML

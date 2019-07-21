@@ -58,6 +58,7 @@ public class TareasController implements Initializable {
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.centerOnScreen();
     }
 
     @FXML
@@ -84,7 +85,7 @@ public class TareasController implements Initializable {
         }
     }
 
-    private void infoBox(String titulo, String creador, String receptor, String descripcion, String fecha) {
+    private void infoBox(String titulo, String creador, String receptor, String descripcion, String fecha) { 
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Detalles");
         alert.setHeaderText("Detalles de la tarea");

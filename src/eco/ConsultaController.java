@@ -45,15 +45,16 @@ public class ConsultaController implements Initializable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Menu.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
+        //app_stage.setMaximized(false);
         app_stage.setResizable(false);
-        app_stage.setMinWidth(900);
-        app_stage.setMinHeight(660);
+//        app_stage.setMinWidth(900);
+//        app_stage.setMinHeight(660);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.centerOnScreen();
         
     }
 
@@ -65,7 +66,7 @@ public class ConsultaController implements Initializable {
         } else {
             if (solo_arbol.isSelected()) {
                 pideId(e);
-                window(e, "Individual.fxml");
+                window(e, "Rindividual.fxml");
             } else {
                 window(e, "ConsultaGeneral.fxml");
                 ConsultaGeneralController.fruit = true;
@@ -82,7 +83,7 @@ public class ConsultaController implements Initializable {
         } else {
             if (solo_arbol.isSelected()) {
                 pideId(e);
-                window(e, "Individual.fxml");
+                window(e, "Rindividual.fxml");
             } else {
                 window(e, "ConsultaGeneral.fxml");
                 ConsultaGeneralController.fruit = false;
@@ -110,15 +111,13 @@ public class ConsultaController implements Initializable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource(ventana));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-        app_stage.setMinWidth(1070);
-        app_stage.setMinHeight(710);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
+        app_stage.setResizable(true);
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.centerOnScreen();
     }
 
     @Override

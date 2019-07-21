@@ -21,7 +21,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -48,36 +51,31 @@ public class ActualizarController implements Initializable {
 
     @FXML
     private void atras(ActionEvent e) throws IOException {
-        Parent home_page_parent = FXMLLoader.load(getClass().getResource("Individual.fxml"));
-        Scene home_page_scene = new Scene(home_page_parent);
-        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-        app_stage.setMinWidth(1070);
-        app_stage.setMinHeight(710);
-        app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
-        app_stage.setTitle("Finca la Esperanza");
-        app_stage.close(); 
-        app_stage.setScene(home_page_scene);
-        app_stage.show();
+        Parent parent = FXMLLoader.load(getClass().getResource("Rindividual.fxml"));
+        Scene scene = new Scene(parent);
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        stage.getIcons().add(new Image("/Imagenes/forest.png"));
+        stage.setTitle("Finca la Esperanza");
+        stage.setResizable(true);
+        stage.close();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    private void goForm(ActionEvent e) throws IOException {
+    private void goForm(ActionEvent e) throws IOException, Throwable {
         disableForm();
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("FormularioActualizar.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-        app_stage.setMinWidth(818);
-        app_stage.setMinHeight(581);
+        app_stage.setResizable(true);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
-        app_stage.close(); //optional
-        app_stage.setScene(home_page_scene);   
+        app_stage.close();
+        app_stage.setScene(home_page_scene);
+//        System.gc();
+//        this.finalize();
         app_stage.show();
-
     }
 
     @FXML

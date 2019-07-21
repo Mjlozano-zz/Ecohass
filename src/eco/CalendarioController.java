@@ -43,13 +43,14 @@ public class CalendarioController implements Initializable {
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
         app_stage.setResizable(true);
-        app_stage.setMinWidth(900);
-        app_stage.setMinHeight(660);
+//        app_stage.setMinWidth(900);
+//        app_stage.setMinHeight(660);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.centerOnScreen();
     }
 
     @FXML
@@ -62,6 +63,7 @@ public class CalendarioController implements Initializable {
         Scene scene = new Scene(rootLayout);
         stage.setScene(scene);
         stage.show();
+        stage.centerOnScreen();
     }
     
     @FXML

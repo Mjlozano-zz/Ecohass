@@ -19,3 +19,7 @@
     -fx-background-radius: 20px;
     -fx-border-radius: 20px;
 }
+
+.tab-header-background {
+    -fx-background-color: #43a047;
+}

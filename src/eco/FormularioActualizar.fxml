@@ -10,71 +10,88 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eco.FormularioActualizarController">
    <children>
-      <Pane layoutX="106.0" layoutY="98.0" prefHeight="445.0" prefWidth="607.0" style="-fx-background-color: #e0e0e0;" styleClass="backPane" stylesheets="@../styles/menu.css">
+      <AnchorPane layoutX="79.0" layoutY="67.0" prefHeight="447.0" prefWidth="660.0" style="-fx-background-color: #eeeeee;" styleClass="backPane" stylesheets="@../styles/menu.css" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="67.0">
          <children>
-            <GridPane layoutX="66.0" layoutY="97.0" prefHeight="252.0" prefWidth="541.0">
-               <columnConstraints>
-                  <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-               </rowConstraints>
+            <VBox alignment="CENTER" prefHeight="447.0" prefWidth="660.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXComboBox fx:id="zonaF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="ZONA" />
-                  <JFXTextField fx:id="edadF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="EDAD" GridPane.rowIndex="3" />
-                  <JFXTextField fx:id="alturaF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="ALTURA" GridPane.rowIndex="1" />
-                  <JFXTextField fx:id="anchoF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="ANCHO" GridPane.rowIndex="2" />
-                  <JFXTextField fx:id="ncreF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="NIVEL DE CRECIMIENTO" GridPane.columnIndex="1" />
-                  <JFXDatePicker fx:id="fechaSF" defaultColor="#388e3c" prefHeight="36.0" prefWidth="182.0" promptText="FECHA DE SIEMBRA" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <JFXTextField fx:id="saludF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="SALUD" GridPane.rowIndex="4" />
-                  <JFXTextField fx:id="totalF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="TOTAL PRODUCIDO" unFocusColor="#388e3c" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <JFXDatePicker fx:id="fechaFF" defaultColor="#388e3c" prefHeight="36.0" prefWidth="182.0" promptText="FECHA DE LA FOTO" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="n_arbol" prefHeight="52.0" prefWidth="81.0" text="ARBOL #">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="267.0" prefWidth="607.0">
+                     <children>
+                        <GridPane prefHeight="252.0" prefWidth="541.0">
+                           <columnConstraints>
+                              <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXComboBox fx:id="zonaF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="ZONA" />
+                              <JFXTextField fx:id="edadF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="EDAD" GridPane.rowIndex="3" />
+                              <JFXTextField fx:id="alturaF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="ALTURA" GridPane.rowIndex="1" />
+                              <JFXTextField fx:id="anchoF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="ANCHO" GridPane.rowIndex="2" />
+                              <JFXTextField fx:id="ncreF" focusColor="#388e3c" prefHeight="36.0" prefWidth="188.0" promptText="NIVEL DE CRECIMIENTO" GridPane.columnIndex="1" />
+                              <JFXDatePicker fx:id="fechaSF" defaultColor="#388e3c" prefHeight="36.0" prefWidth="182.0" promptText="FECHA DE SIEMBRA" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <JFXTextField fx:id="saludF" focusColor="#388e3c" prefHeight="36.0" prefWidth="167.0" promptText="SALUD" GridPane.rowIndex="4" />
+                              <JFXTextField fx:id="totalF" focusColor="#388e3c" prefHeight="36.0" prefWidth="180.0" promptText="TOTAL PRODUCIDO" unFocusColor="#388e3c" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <JFXDatePicker fx:id="fechaFF" defaultColor="#388e3c" prefHeight="36.0" prefWidth="182.0" promptText="FECHA DE LA FOTO" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="7.0">
+                     <children>
+                        <JFXButton alignment="CENTER" onAction="#atras" prefHeight="33.0" prefWidth="77.0" styleClass="log" stylesheets="@../styles/Login.css" text="Atras">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Imagenes/back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" contentDisplay="RIGHT" onAction="#actualizar" prefHeight="33.0" prefWidth="103.0" styleClass="log" stylesheets="@../styles/Login.css" text="Actualizar">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Imagenes/updated.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
                </children>
-            </GridPane>
-            <Label fx:id="n_arbol" layoutX="269.0" layoutY="14.0" text="ARBOL #">
-               <font>
-                  <Font name="Segoe UI Semibold" size="20.0" />
-               </font>
-            </Label>
-            <JFXButton alignment="CENTER" contentDisplay="RIGHT" layoutX="303.0" layoutY="375.0" onAction="#actualizar" prefHeight="33.0" prefWidth="103.0" styleClass="log" stylesheets="@../styles/Login.css" text="Actualizar">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Imagenes/updated.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
-            <JFXButton alignment="CENTER" layoutX="213.0" layoutY="375.0" onAction="#atras" prefHeight="33.0" prefWidth="77.0" styleClass="log" stylesheets="@../styles/Login.css" text="Atras">
-               <graphic>
-                  <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Imagenes/back.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </JFXButton>
+            </VBox>
          </children>
-      </Pane>
-      <Pane prefHeight="54.0" prefWidth="818.0" style="-fx-background-color: #388e3c;">
+      </AnchorPane>
+      <AnchorPane prefHeight="45.0" prefWidth="818.0" style="-fx-background-color: #388e3c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="225.0" layoutY="11.0" text="ACTUALIZAR INFORMACIÓN" textFill="WHITE">
-               <font>
-                  <Font name="Segoe UI Bold" size="27.0" />
-               </font>
-            </Label>
+            <HBox alignment="CENTER" layoutY="6.0" prefHeight="35.0" prefWidth="818.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0">
+               <children>
+                  <Label text="ACTUALIZAR INFORMACIÓN" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
          </children>
-      </Pane>
+      </AnchorPane>
    </children>
 </AnchorPane>
