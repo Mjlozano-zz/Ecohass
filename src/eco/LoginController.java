@@ -19,6 +19,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import static javafx.scene.input.KeyCode.ENTER;
 import javafx.stage.Stage;
 
 /**
@@ -48,8 +49,18 @@ public class LoginController implements Initializable {
     @FXML
     public void logInK(KeyEvent event) throws IOException { // aqui pones el codigo el mismo codigo para iniciar sesion 
         
+        if(event.getCode().equals(ENTER)){
+            //aqui validas si el usuario y contraseña son correctos
+            inicia(event);
+        }else{
+            
+        }
         
-        //esto lo vas a poner en la parte donde se valide que si es correcto el usuario y contraseña
+       
+        //----------------------------------------------------------------------------------
+    }
+    
+    private void inicia(KeyEvent event) throws IOException{
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Menu.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -61,7 +72,6 @@ public class LoginController implements Initializable {
         app_stage.setScene(home_page_scene);
         app_stage.show();
         app_stage.centerOnScreen();
-        //----------------------------------------------------------------------------------
     }
 
     @FXML

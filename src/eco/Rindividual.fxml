@@ -95,7 +95,7 @@
                                  <content>
                                     <AnchorPane fx:id="zpane" minHeight="0.0" minWidth="0.0" prefHeight="365.0" prefWidth="289.0">
                                        <children>
-                                          <ImageView fx:id="image" fitHeight="383.0" fitWidth="294.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="image" fitHeight="383.0" fitWidth="294.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
                                        </children>
                                     </AnchorPane>
                                  </content>
@@ -124,7 +124,7 @@
                                                 <Font name="Segoe UI Bold" size="13.0" />
                                              </font>
                                           </Label>
-                                          <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                                          <HBox prefHeight="19.0" prefWidth="300.0" spacing="50.0">
                                              <children>
                                                 <Label text="Altura: ">
                                                    <font>
@@ -144,11 +144,6 @@
                                              </font>
                                           </Label>
                                           <Label text="Fecha en que se sembró:">
-                                             <font>
-                                                <Font name="Segoe UI Bold" size="13.0" />
-                                             </font>
-                                          </Label>
-                                          <Label text="Fecha de la foto:">
                                              <font>
                                                 <Font name="Segoe UI Bold" size="13.0" />
                                              </font>

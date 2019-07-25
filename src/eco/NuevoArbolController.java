@@ -35,11 +35,7 @@ public class NuevoArbolController implements Initializable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource(ventana));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-        app_stage.setMinWidth(900);
-        app_stage.setMinHeight(660);
-
+        app_stage.setResizable(true);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
