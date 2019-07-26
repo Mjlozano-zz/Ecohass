@@ -25,7 +25,7 @@ public class Eco extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));  //Se carga la primera ventana     
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.getIcons().add(new Image("/Imagenes/forest.png"));
         stage.centerOnScreen();
         stage.setTitle("Iniciar Sesión");

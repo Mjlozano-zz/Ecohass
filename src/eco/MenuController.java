@@ -46,10 +46,6 @@ public class MenuController implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
             Scene scene = new Scene(root);
             Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-//            app_stage.setMinWidth(353);
-//            app_stage.setMinHeight(480);
-            app_stage.setMaxWidth(353);
-            app_stage.setMaxHeight(480);
             app_stage.setResizable(true);
             app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
             app_stage.setTitle("Finca la Esperanza");
@@ -66,12 +62,7 @@ public class MenuController implements Initializable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Tareas.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-//        app_stage.setMinWidth(840);
-//        app_stage.setMinHeight(610);
-//        app_stage.setMaxWidth(840);
-//        app_stage.setMaxHeight(610);
+        app_stage.setResizable(true);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
@@ -85,12 +76,7 @@ public class MenuController implements Initializable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Calendario.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-//        app_stage.setMinWidth(780);
-//        app_stage.setMinHeight(580);
-//        app_stage.setMaxWidth(780);
-//        app_stage.setMaxHeight(580);
+        app_stage.setResizable(true);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
@@ -105,12 +91,7 @@ public class MenuController implements Initializable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("NuevoArbol.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-//        app_stage.setMinWidth(840);
-//        app_stage.setMinHeight(610);
-//        app_stage.setMaxWidth(840);
-//        app_stage.setMaxHeight(610);
+        app_stage.setResizable(true);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
@@ -124,8 +105,7 @@ public class MenuController implements Initializable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource(ventana));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
+        app_stage.setResizable(true);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
