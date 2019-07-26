@@ -48,9 +48,9 @@ public class MenuController implements Initializable {
             Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 //            app_stage.setMinWidth(353);
 //            app_stage.setMinHeight(480);
-//            app_stage.setMaxWidth(353);
-//            app_stage.setMaxHeight(480);
-            app_stage.setResizable(false);
+            app_stage.setMaxWidth(353);
+            app_stage.setMaxHeight(480);
+            app_stage.setResizable(true);
             app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
             app_stage.setTitle("Finca la Esperanza");
             app_stage.close(); //optional
