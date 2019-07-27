@@ -82,8 +82,11 @@ public class MenuController implements Initializable {
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                app_stage.setMaximized(false);
+        });
         app_stage.centerOnScreen();
-
     }
 
     @FXML

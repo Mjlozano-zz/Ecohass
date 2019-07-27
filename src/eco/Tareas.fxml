@@ -11,6 +11,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -27,54 +28,58 @@
                </font>
             </Label>
          </children></Pane>
-      <JFXButton layoutX="14.0" layoutY="487.0" onAction="#atras" prefHeight="41.0" prefWidth="103.0" ripplerFill="#dddbdb" styleClass="atras" stylesheets="@../styles/consulta.css" text="Atrás" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0">
+      <JFXButton alignment="CENTER" layoutX="14.0" layoutY="487.0" onAction="#atras" prefHeight="45.0" prefWidth="159.0" ripplerFill="#dddbdb" styleClass="atras" stylesheets="@../styles/consulta.css" text="Atrás" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0">
          <graphic>
-            <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Imagenes/back.png" />
                </image>
             </ImageView>
          </graphic>
          <font>
-            <Font name="Segoe UI Bold" size="17.0" />
+            <Font name="Segoe UI Bold" size="14.0" />
          </font>
       </JFXButton>
-      <Pane layoutX="62.0" layoutY="71.0" prefHeight="447.0" prefWidth="375.0" style="-fx-background-color: #e0e0e0;" styleClass="backPane" stylesheets="@../styles/menu.css">
-         <children>
-            <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="90.0" layoutY="40.0" prefHeight="38.0" prefWidth="231.0" promptText="NOMBRE DEL TECNICO" />
-            <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="90.0" layoutY="110.0" prefHeight="38.0" prefWidth="231.0" promptText="CÉDULA" />
-            <JFXDatePicker defaultColor="#388e3c" layoutX="91.0" layoutY="174.0" prefHeight="38.0" prefWidth="231.0" promptText="FECHA PARA CUMPLIR ORDEN" />
-            <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="90.0" layoutY="231.0" prefHeight="38.0" prefWidth="231.0" promptText="TITULO DE ORDEN" />
-            <JFXComboBox layoutX="90.0" layoutY="283.0" prefHeight="38.0" prefWidth="120.0" promptText="ARBOLES" />
-            <JFXComboBox layoutX="221.0" layoutY="283.0" prefHeight="38.0" prefWidth="103.0" promptText="AREA" />
-            <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="55.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Imagenes/name.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="55.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Imagenes/cedula.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="56.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Imagenes/title.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="55.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Imagenes/ar.png" />
-               </image>
-            </ImageView>
-            <JFXTextArea layoutX="91.0" layoutY="334.0" prefHeight="99.0" prefWidth="231.0" promptText="DESCRIPCIÓN" />
-         </children>
-      </Pane>
-      <JFXListView fx:id="listaT" editable="true" layoutX="454.0" layoutY="71.0" prefHeight="447.0" prefWidth="325.0" />
       <JFXButton layoutX="299.0" layoutY="526.0" onAction="#addTarea" prefHeight="38.0" prefWidth="129.0" style="-fx-background-color: #388e3c;" styleClass="atras" stylesheets="@../styles/consulta.css" text="Asignar Tarea" textFill="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="13.0" />
          </font>
       </JFXButton>
+      <HBox alignment="CENTER" layoutX="49.0" layoutY="75.0" prefHeight="447.0" prefWidth="758.0" spacing="20.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <Pane prefHeight="447.0" prefWidth="375.0" style="-fx-background-color: #e0e0e0;" styleClass="backPane" stylesheets="@../styles/menu.css">
+               <children>
+                  <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="90.0" layoutY="40.0" prefHeight="38.0" prefWidth="231.0" promptText="NOMBRE DEL TECNICO" />
+                  <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="90.0" layoutY="110.0" prefHeight="38.0" prefWidth="231.0" promptText="CÉDULA" />
+                  <JFXDatePicker defaultColor="#388e3c" layoutX="91.0" layoutY="174.0" prefHeight="38.0" prefWidth="231.0" promptText="FECHA PARA CUMPLIR ORDEN" />
+                  <JFXTextField focusColor="#388e3c" labelFloat="true" layoutX="90.0" layoutY="231.0" prefHeight="38.0" prefWidth="231.0" promptText="TITULO DE ORDEN" />
+                  <JFXComboBox layoutX="90.0" layoutY="283.0" prefHeight="38.0" prefWidth="120.0" promptText="ARBOLES" />
+                  <JFXComboBox layoutX="221.0" layoutY="283.0" prefHeight="38.0" prefWidth="103.0" promptText="AREA" />
+                  <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="55.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/name.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="55.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/cedula.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="56.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/title.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="55.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/ar.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextArea layoutX="91.0" layoutY="334.0" prefHeight="99.0" prefWidth="231.0" promptText="DESCRIPCIÓN" />
+               </children>
+            </Pane>
+            <JFXListView fx:id="listaT" editable="true" prefHeight="447.0" prefWidth="325.0" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

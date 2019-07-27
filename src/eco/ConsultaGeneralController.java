@@ -45,16 +45,15 @@ public class ConsultaGeneralController implements Initializable {
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                app_stage.setMaximized(false);
+        });
     }
       
     
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-//        if(fruit){
-//            arbol_icon.setImage(aguacate);
-//        }else{
-//            arbol_icon.setImage(tomate);
-//        }
+    public void initialize(URL url, ResourceBundle rb) {  
         
     }    
     

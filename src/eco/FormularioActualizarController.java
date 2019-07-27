@@ -104,6 +104,10 @@ public class FormularioActualizarController implements Initializable {
         app_stage.hide(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                app_stage.setMaximized(false);
+        });
         app_stage.centerOnScreen();
     }
 

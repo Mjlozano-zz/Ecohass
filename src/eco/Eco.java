@@ -30,6 +30,10 @@ public class Eco extends Application {
         stage.centerOnScreen();
         stage.setTitle("Iniciar Sesión");
         stage.show();
+        stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                stage.setMaximized(false);
+        });
         stage.centerOnScreen();
         
     }

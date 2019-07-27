@@ -21,10 +21,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -72,10 +69,12 @@ public class ActualizarController implements Initializable {
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close();
-        app_stage.setScene(home_page_scene);
-//        System.gc();
-//        this.finalize();
         app_stage.show();
+        app_stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                app_stage.setMaximized(false);
+        });
+        app_stage.centerOnScreen();
     }
 
     @FXML

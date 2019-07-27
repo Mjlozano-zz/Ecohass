@@ -38,6 +38,8 @@ public class LoginController implements Initializable {
 
     @FXML
     public static JFXButton logB, cerrar;
+    
+    public static boolean obs;
 
     @FXML
     public void logIn(ActionEvent event) throws IOException { // aqui pones el codigo para iniciar sesión
@@ -66,11 +68,16 @@ public class LoginController implements Initializable {
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setMinWidth(900);
         app_stage.setMinHeight(660);
+        ConsultaController.observador[0] = false;
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                app_stage.setMaximized(false);
+        });
         app_stage.centerOnScreen();
     }
 
@@ -80,14 +87,17 @@ public class LoginController implements Initializable {
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-//        app_stage.setMinWidth(900);
-//        app_stage.setMinHeight(660);
+        app_stage.setResizable(true);
+        ConsultaController.observador[0] = false;
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                app_stage.setMaximized(false);
+        });
         app_stage.centerOnScreen();
     }
 
@@ -96,17 +106,17 @@ public class LoginController implements Initializable {
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Consulta.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setMaximized(false);
-        app_stage.setResizable(false);
-//        app_stage.setMinWidth(839);
-//        app_stage.setMinHeight(573);
-//        app_stage.setMaxWidth(1000);
-//        app_stage.setMaxHeight(650);
+        app_stage.setResizable(true);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close();
+        ConsultaController.observador[0] = true;
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                app_stage.setMaximized(false);
+        });
         app_stage.centerOnScreen();
     }
 

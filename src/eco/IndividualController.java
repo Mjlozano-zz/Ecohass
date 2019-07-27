@@ -24,7 +24,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -85,6 +84,10 @@ public class IndividualController implements Initializable {
         app_stage.setResizable(true);
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                app_stage.setMaximized(false);
+        });
         app_stage.centerOnScreen();
     }
 
@@ -98,6 +101,10 @@ public class IndividualController implements Initializable {
         app_stage.close(); //optional
         app_stage.setScene(home_page_scene);
         app_stage.show();
+        app_stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue)
+                app_stage.setMaximized(false);
+        });
         app_stage.centerOnScreen();
     }
 
