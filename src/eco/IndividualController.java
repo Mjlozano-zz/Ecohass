@@ -34,7 +34,7 @@ import javafx.stage.Stage;
 public class IndividualController implements Initializable {
 
     @FXML
-    JFXButton zoomIn, zoomOut;
+    JFXButton zoomIn, zoomOut, addPhoto, edit;
     @FXML
     ImageView image; // esta es la variable en la que cargaras la imagen
     @FXML
@@ -127,5 +127,9 @@ public class IndividualController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ponerImagen();
+        if (LoginController.ver.isObs() == true) {
+            edit.setDisable(true);
+            addPhoto.setDisable(true);
+        }
     }
 }

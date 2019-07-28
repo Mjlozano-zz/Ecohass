@@ -39,7 +39,9 @@ public class LoginController implements Initializable {
     @FXML
     public static JFXButton logB, cerrar;
     
-    public static boolean obs;
+    public static VerObservador ver = new VerObservador(false);
+    
+    
 
     @FXML
     public void logIn(ActionEvent event) throws IOException { // aqui pones el codigo para iniciar sesión
@@ -68,7 +70,6 @@ public class LoginController implements Initializable {
         Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         app_stage.setMinWidth(900);
         app_stage.setMinHeight(660);
-        ConsultaController.observador[0] = false;
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
@@ -88,7 +89,6 @@ public class LoginController implements Initializable {
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setMaximized(false);
         app_stage.setResizable(true);
-        ConsultaController.observador[0] = false;
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
         app_stage.close(); //optional
@@ -103,14 +103,14 @@ public class LoginController implements Initializable {
 
     @FXML
     private void observador(ActionEvent e) throws IOException {
+        ver.setObs(true);
         Parent home_page_parent = FXMLLoader.load(getClass().getResource("Consulta.fxml"));
         Scene home_page_scene = new Scene(home_page_parent);
         Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         app_stage.setResizable(true);
         app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
         app_stage.setTitle("Finca la Esperanza");
-        app_stage.close();
-        ConsultaController.observador[0] = true;
+        app_stage.close(); 
         app_stage.setScene(home_page_scene);
         app_stage.show();
         app_stage.maximizedProperty().addListener((observable, oldValue, newValue) -> {

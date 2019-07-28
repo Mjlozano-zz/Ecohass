@@ -74,5 +74,10 @@
       </JFXButton>
       <JFXRadioButton fx:id="solo_arbol" layoutX="526.0" layoutY="60.0" text="consulta de un solo arbol" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="60.0" />
       <JFXRadioButton fx:id="general" layoutX="526.0" layoutY="89.0" text="Consulta General" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="90.0" />
+      <JFXButton fx:id="cierra" layoutX="343.0" layoutY="65.0" onAction="#cerrarSesion" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #f44336;" text="Cerrar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

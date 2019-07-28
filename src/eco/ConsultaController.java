@@ -7,6 +7,7 @@ package eco;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
+import static eco.LoginController.ver;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
@@ -41,9 +42,7 @@ public class ConsultaController implements Initializable {
     private JFXRadioButton solo_arbol, general;
 
     @FXML
-    private JFXButton atr;
-
-    public static boolean observador[] = new boolean[2];
+    private JFXButton atr, cierra;
 
     @FXML
     private void atras(ActionEvent e) throws IOException {
@@ -130,37 +129,39 @@ public class ConsultaController implements Initializable {
         app_stage.centerOnScreen();
     }
 
-    private void changeM() {
-        atr.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent e) {
-                try {
-                    window(e, "Login.fxml");
-                } catch (IOException ex) {
-                    Logger.getLogger(ConsultaController.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        });
-    }
+    
+    @FXML
+    private void cerrarSesion(ActionEvent e) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "¿Esta seguro de cerrar Sesión?", ButtonType.YES, ButtonType.CANCEL);
+        alert.setTitle("Confirmar");
+        alert.showAndWait();
 
-    private void changeBack() {
-        atr.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent e) {
-                try {
-                    window(e, "Menu.fxml");
-                } catch (IOException ex) {
-                    Logger.getLogger(ConsultaController.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        });
+        if (alert.getResult() == ButtonType.YES) {
+            ver.setObs(false);
+            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            Scene scene = new Scene(root);
+            Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            app_stage.setResizable(true);
+            app_stage.getIcons().add(new Image("/Imagenes/forest.png"));
+            app_stage.setTitle("Finca la Esperanza");
+            app_stage.close(); //optional
+            app_stage.setScene(scene);
+            app_stage.show();
+            app_stage.centerOnScreen();
+        }
+
     }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ToggleGroup group = new ToggleGroup();
         solo_arbol.setToggleGroup(group);
         general.setToggleGroup(group);
-        
+        if (LoginController.ver.isObs() == true) {
+            atr.setVisible(false);
+        }else{
+            cierra.setVisible(false);
+        }
     }
 
 }
